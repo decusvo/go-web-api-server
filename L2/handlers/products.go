@@ -88,8 +88,6 @@ func (p *Products) addProduct(rw http.ResponseWriter, r *http.Request) {
 	data.AddProduct(prod)
 }
 
-// TODO: Understand why the method we are implementing is for Products and not for *Products.
-// TODO: Understand why the method needs to be stored in this page.
 func (p *Products) updateProducts(id int, rw http.ResponseWriter, r *http.Request) {
 	p.l.Println("PUT Request - Update Product")
 	prod := &data.Product{}
